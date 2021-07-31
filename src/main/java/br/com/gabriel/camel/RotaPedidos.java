@@ -14,10 +14,14 @@ public class RotaPedidos {
 			@Override
 			public void configure() {
 				from("file:pedidos?delay=5s&noop=true")
-						.log("${id}")
+						.split()
+							.xpath("/pedido/itens/item")
+						.filter()
+							.xpath("/item/formato[text()='EBOOK']")
+							.log("${id}")
 						.marshal().xmljson()
-						.log("${body}")
-						.setHeader("CamelFileName", simple("${file:name.noext}.json"))
+							.log("${body}")
+							.setHeader("CamelFileName", simple("${file:name.noext}.json"))
 						.to("file:saida");
 			}
 		});
