@@ -49,7 +49,24 @@
 	    <artifactId>camel-jms</artifactId>
 	    <version>${camel-version}</version>
 	</dependency>
-	
+
+	  <dependency>
+		  <groupId>com.thoughtworks.xstream</groupId>
+		  <artifactId>xstream</artifactId>
+		  <version>1.4.8</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>org.apache.camel</groupId>
+		  <artifactId>camel-jdbc</artifactId>
+		  <version>${camel-version}</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>mysql</groupId>
+		  <artifactId>mysql-connector-java</artifactId>
+		  <version>5.1.46</version>
+	  </dependency>
 	<dependency>
 	    <groupId>org.apache.logging.log4j</groupId>
 	    <artifactId>log4j-api</artifactId>
@@ -71,9 +88,14 @@
 		<groupId>org.apache.logging.log4j</groupId>
 		<artifactId>log4j-slf4j-impl</artifactId>
 		<version>2.4</version>
-	</dependency>  
-  
-<!-- 	<dependency> -->
+	</dependency>
+	  <dependency>
+		  <groupId>org.apache.camel</groupId>
+		  <artifactId>camel-xstream</artifactId>
+		  <version>2.16.0</version>
+	  </dependency>
+
+	  <!-- 	<dependency> -->
 <!-- 		<groupId>org.apache.camel</groupId> -->
 <!-- 		<artifactId>camel-sql</artifactId> -->
 <!-- 		<version>${camel-version}</version> -->
